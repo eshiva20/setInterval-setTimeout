@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeut and setInterval </title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <p class="demo1"></p>
+
+    <script>
+        var count=1;
+        setTimeout(function(){
+            document.getElementById("demo").innerHTML="setTimeOut runned ....."
+        },3000)
+
+        let interval =setInterval(function(){
+            if(count==10){
+            clearInterval(interval)
+             document.getElementById("demo").innerHTML +=" <br/> ClearInterval Runned ....."
+            }
+            console.log(count++)
+        },1000)
+
+        
+    </script>
+</body>
+</html>
